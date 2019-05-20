@@ -69,3 +69,14 @@ You can also
 * Set the forwarding address to a URL as well as an email address (e.g. if you use Zapier to trigger an action when you receive a support query)
 
 ## Sending mail from your newly set-up account
+
+(This is for gmail - you may need to check your email provider's docs, but it shouldn't be *too* different)
+
+* Go to Settings > Accounts & Import
+* Under "Send mail as", hit "Add another email address"
+* Enter your display name and email address, and go to the next step
+* The SMTP server is smtp.mailgun.org
+* The port is 587, using TLS
+* The login is `postmaster@mg.custom.com` - i.e. `postmaster@` + the subdomain you set up on mailgun
+* The password is available at Mailgun - Sidebar > Domain Settings > SMTP Credentials
+* Now submit this and google will send a test email to make sure you actually do have access to the address you're claiming, and then you're done!
